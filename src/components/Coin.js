@@ -13,7 +13,6 @@ const CoinComponent = (props) => {
     coinrankingUrl,
     color,
   } = props.data;
-  console.log(name);
 
   return (
     <div

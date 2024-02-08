@@ -14,16 +14,16 @@ const options = {
 
 export default function Home() {
   const [clicked, setClicked] = useState(false);
-  let coins = [];
+  const [coins, setCoins] = useState();
 
   // Get the coin data
   async function getCoinData() {
     try {
       const response = await fetch(url, options);
       const data = await response.json();
-      coins = data.data.coins;
       console.log(coins);
       setClicked(true);
+      setCoins(data.data.coins);
       //   coins = coins.map((coinData, index) => {
       //     <Coin key={index} data={coinData}></Coin>;
       //   });
@@ -39,7 +39,7 @@ export default function Home() {
       </button>
       {clicked
         ? coins.map((coinData) => {
-            <Coin data={coinData}></Coin>;
+            return <Coin data={coinData}></Coin>; // YOU HAVE TO RETURN IT!!!
           })
         : null}
     </>
