@@ -11,4 +11,6 @@ b. Populate cryptocurrency components with API data: Done
 c. Display components to user: Done
 
 Use Tailwinds CSS to successfully style the data being displayed in an aesthetic manner
-a.
+a. Integrate Tailwind CSS
+b. Style buttons
+c. Integrate flexbox
