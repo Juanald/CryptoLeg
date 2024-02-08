@@ -31,10 +31,10 @@ const CoinComponent = (props) => {
       <h2 className="font-bold">
         {name} ({symbol})
       </h2>
-      <p>Price: ${price}</p>
+      <p>Price: ${Math.round(price * 100) / 100} USD</p>
       <p>BTC Price: {btcPrice}</p>
       <p>Change: {change}%</p>
-      <p>Market Cap: ${marketCap}</p>
+      <p>Market Cap: ${marketCap.toLocaleString()}</p>
       <p>4h Volume: {volume4h}</p>
 
       <div>
