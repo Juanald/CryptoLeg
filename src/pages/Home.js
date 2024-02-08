@@ -34,14 +34,21 @@ export default function Home() {
 
   return (
     <>
-      <button onClick={getCoinData} id="api-button">
-        Get Latest Crypto Data Here
-      </button>
-      {clicked
-        ? coins.map((coinData) => {
-            return <Coin data={coinData}></Coin>; // YOU HAVE TO RETURN IT!!!
-          })
-        : null}
+      <div className="flex justify-center">
+        <button
+          class="m-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+          onClick={getCoinData}
+        >
+          Get Crypto Data
+        </button>
+      </div>
+      <div className="flex flex-wrap flex-col justify-center">
+        {clicked
+          ? coins.map((coinData) => {
+              return <Coin data={coinData}></Coin>; // YOU HAVE TO RETURN IT!!!
+            })
+          : null}
+      </div>
     </>
   );
 }

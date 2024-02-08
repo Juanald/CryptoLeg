@@ -28,7 +28,7 @@ const CoinComponent = (props) => {
         alt={`${name} icon`}
         style={{ width: "50px", height: "50px" }}
       />
-      <h2>
+      <h2 className="font-bold">
         {name} ({symbol})
       </h2>
       <p>Price: ${price}</p>
@@ -38,9 +38,14 @@ const CoinComponent = (props) => {
       <p>4h Volume: {volume4h}</p>
 
       <div>
-        <a href={coinrankingUrl} target="_blank" rel="noopener noreferrer">
-          Coin Ranking
-        </a>
+        <button
+          style={{ backgroundColor: color }}
+          className="text-white font-bold py-2 px-4 my-2 rounded crypto-button"
+        >
+          <a href={coinrankingUrl} target="_blank" rel="noopener noreferrer">
+            Coin Ranking
+          </a>
+        </button>
       </div>
     </div>
   );
