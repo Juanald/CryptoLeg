@@ -14,6 +14,7 @@ const options = {
 
 export default function Home() {
   const [clicked, setClicked] = useState(false);
+  const [disabled, setDisabled] = useState(false);
   const [coins, setCoins] = useState();
 
   // Get the coin data

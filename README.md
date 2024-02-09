@@ -14,4 +14,10 @@ Use Tailwinds CSS to successfully style the data being displayed in an aesthetic
 a. Buttons Done
 b. Possibly redesign the cards for each coin
 
-Add "Buy" and "Sell" capabilities
+As a user I want to be able to login and logout, filling my information in a form, and pressing submit to login
+a. Design the login page Done.
+b. On successful login, redirect to the home page DONE.
+c. Eventually implement JWTs.
+
+I want to learn how to implement routing
+Done.
