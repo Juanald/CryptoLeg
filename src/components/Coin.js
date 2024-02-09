@@ -1,6 +1,10 @@
 import React from "react";
+import Coingraph from "./Coingraph";
+import { useNavigate } from "react-router-dom";
 
 const CoinComponent = (props) => {
+  const navigate = useNavigate();
+
   const {
     name,
     symbol,
@@ -13,6 +17,11 @@ const CoinComponent = (props) => {
     coinrankingUrl,
     color,
   } = props.data;
+
+  const handleGraph = () => {
+    // Populate a graph component being handed the sparkline data, coin name, and analytics.
+    navigate("/graph", { state: { coinData: props.data } });
+  };
 
   return (
     <div
@@ -36,7 +45,7 @@ const CoinComponent = (props) => {
       <p>Change: {change}%</p>
       <p>Market Cap: ${marketCap.toLocaleString()}</p>
 
-      <div>
+      <div className="">
         <button
           style={{ backgroundColor: color }}
           className="text-white font-bold py-2 px-4 my-2 rounded crypto-button active:scale-95"
@@ -44,6 +53,13 @@ const CoinComponent = (props) => {
           <a href={coinrankingUrl} target="_blank" rel="noopener noreferrer">
             Coin Ranking
           </a>
+        </button>
+        <button
+          style={{ backgroundColor: color }}
+          className="block text-white font-bold py-2 px-4 my-2 rounded crypto-button active:scale-95"
+          onClick={handleGraph}
+        >
+          Get a Real Time Graph
         </button>
       </div>
     </div>

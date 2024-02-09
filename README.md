@@ -21,3 +21,7 @@ c. Eventually implement JWTs.
 
 I want to learn how to implement routing
 Done.
+
+For each cryptocurrency, I want a link that will show a chart on the crypto prices
+a. Create the button linking to another component page with params
+b. Learn how to use charts in react

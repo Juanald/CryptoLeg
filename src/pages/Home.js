@@ -22,6 +22,7 @@ export default function Home() {
     try {
       const response = await fetch(url, options);
       const data = await response.json();
+      console.log(data);
       setClicked(true);
       setCoins(data.data.coins);
     } catch (e) {
