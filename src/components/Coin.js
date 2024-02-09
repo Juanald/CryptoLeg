@@ -35,12 +35,11 @@ const CoinComponent = (props) => {
       <p>BTC Price: {btcPrice}</p>
       <p>Change: {change}%</p>
       <p>Market Cap: ${marketCap.toLocaleString()}</p>
-      <p>4h Volume: {volume4h}</p>
 
       <div>
         <button
           style={{ backgroundColor: color }}
-          className="text-white font-bold py-2 px-4 my-2 rounded crypto-button"
+          className="text-white font-bold py-2 px-4 my-2 rounded crypto-button active:scale-95"
         >
           <a href={coinrankingUrl} target="_blank" rel="noopener noreferrer">
             Coin Ranking

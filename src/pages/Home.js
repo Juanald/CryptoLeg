@@ -21,12 +21,8 @@ export default function Home() {
     try {
       const response = await fetch(url, options);
       const data = await response.json();
-      console.log(coins);
       setClicked(true);
       setCoins(data.data.coins);
-      //   coins = coins.map((coinData, index) => {
-      //     <Coin key={index} data={coinData}></Coin>;
-      //   });
     } catch (e) {
       console.log(e);
     }
@@ -36,7 +32,7 @@ export default function Home() {
     <>
       <div className="flex justify-center">
         <button
-          class="m-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+          class="m-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded active:scale-95"
           onClick={getCoinData}
         >
           Get Crypto Data
