@@ -13,6 +13,7 @@ c. Display components to user: Done
 Use Tailwinds CSS to successfully style the data being displayed in an aesthetic manner
 a. Buttons Done
 b. Possibly redesign the cards for each coin
+c. Fix highlighting according to current page
 
 As a user I want to be able to login and logout, filling my information in a form, and pressing submit to login
 a. Design the login page Done.

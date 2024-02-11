@@ -1,28 +1,57 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
+import { useLocation } from "react-router-dom";
+import { Chart, registerables } from "chart.js";
 
-export default function Coingraph({ coinData }) {
+Chart.register(...registerables);
+
+export default function Coingraph() {
   // Extracting necessary data from coinData
-  const { name, sparkline } = coinData;
+  const location = useLocation();
+  const { name, sparkline, color } = location.state;
 
-  // Chart data
+  function generateHoursList() {
+    const hoursList = [];
+    let curHour = new Date().getHours();
+
+    for (let hour = 24; hour > 0; hour--) {
+      let time = curHour - hour;
+      hoursList.push(`${time}:00`);
+    }
+
+    return hoursList;
+  }
+
+  // Chart data in the form of a time series
   const chartData = {
-    labels: Array.from({ length: sparkline.length }, (_, i) => i + 1), // Assuming labels are sequential numbers
+    // Get 24 hours
+    labels: generateHoursList(),
     datasets: [
       {
-        label: `${name} Price`,
+        label: `${name} Prices`,
         data: sparkline.map((price) => parseFloat(price)), // Converting sparkline data to numbers
-        fill: false,
-        borderColor: "#f7931A",
+        fill: true,
+        borderColor: color,
         tension: 0.1,
       },
     ],
   };
 
   return (
-    <div>
-      <h2>{`${name} Price Chart`}</h2>
-      <Line data={chartData} />
+    <div className="flex flex-col justify-center align-center">
+      {/* <h2>{`${name} Price Chart`}</h2> */}
+      <Line
+        data={chartData}
+        options={{
+          maintainAspectRatio: false,
+          plugins: {
+            title: {
+              display: true,
+              text: `${name} prices over the last 24h`,
+            },
+          },
+        }}
+      />
     </div>
   );
 }

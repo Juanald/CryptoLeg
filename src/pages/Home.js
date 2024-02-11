@@ -24,6 +24,7 @@ export default function Home() {
       const data = await response.json();
       console.log(data);
       setClicked(true);
+      setDisabled(true);
       setCoins(data.data.coins);
     } catch (e) {
       console.log(e);
@@ -36,6 +37,7 @@ export default function Home() {
         <button
           class="m-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded active:scale-95"
           onClick={getCoinData}
+          disabled={disabled}
         >
           Get Crypto Data
         </button>

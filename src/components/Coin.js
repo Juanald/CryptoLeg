@@ -1,5 +1,4 @@
 import React from "react";
-import Coingraph from "./Coingraph";
 import { useNavigate } from "react-router-dom";
 
 const CoinComponent = (props) => {
@@ -12,15 +11,18 @@ const CoinComponent = (props) => {
     btcPrice,
     change,
     marketCap,
-    volume4h,
     iconUrl,
     coinrankingUrl,
     color,
   } = props.data;
+  console.log(props.data);
 
   const handleGraph = () => {
     // Populate a graph component being handed the sparkline data, coin name, and analytics.
-    navigate("/graph", { state: { coinData: props.data } });
+    // navigate("/graph", { state: { coinData: props.data } });
+    navigate("/graph", {
+      state: { sparkline: props.data.sparkline, name: name, color: color },
+    });
   };
 
   return (
