@@ -1,13 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import Coin from "../components/Coin";
+import RAPID_API_KEY from "../shared";
 
 const url =
   "https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0";
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "bcc09af50amsh3ee7c05739dce7cp1aa2fcjsn7bf6d66f82d6",
+    "X-RapidAPI-Key": RAPID_API_KEY,
     "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
   },
 };
