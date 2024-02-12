@@ -70,9 +70,7 @@ export default function Login() {
           </Link>
         </div>
       </form>
-      <p className="text-center text-gray-500 text-xs">
-        @Gavyin thank you Tailwind
-      </p>
+      <p className="text-center text-gray-500 text-xs">@Gavin Enterprises</p>
     </div>
   );
 }
