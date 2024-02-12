@@ -35,7 +35,9 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <img src={logo} className="h-10 w-auto mr-4" alt="Logo" />
+              <a href="/">
+                <img src={logo} className="h-10 w-auto mr-4" alt="Logo"></img>
+              </a>
               <div className="flex flex-1 items-center justify-end items-center gap-1">
                 <div className="flex justify-center">
                   {navigation.map((item) => (
