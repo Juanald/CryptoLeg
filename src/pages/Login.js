@@ -12,7 +12,7 @@ export default function Login() {
     console.log("Username:", username);
     console.log("Password:", password);
     // You may also redirect the user to another page after successful login
-    navigate("/");
+    navigate("/home");
   };
 
   return (

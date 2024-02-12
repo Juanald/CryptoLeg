@@ -15,7 +15,6 @@ const CoinComponent = (props) => {
     coinrankingUrl,
     color,
   } = props.data;
-  console.log(props.data);
 
   const handleGraph = () => {
     // Populate a graph component being handed the sparkline data, coin name, and analytics.

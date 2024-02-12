@@ -8,7 +8,7 @@ const url =
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": RAPID_API_KEY,
+    "X-RapidAPI-Key": "bcc09af50amsh3ee7c05739dce7cp1aa2fcjsn7bf6d66f82d6",
     "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
   },
 };

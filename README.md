@@ -24,5 +24,9 @@ I want to learn how to implement routing
 Done.
 
 For each cryptocurrency, I want a link that will show a chart on the crypto prices
-a. Create the button linking to another component page with params
-b. Learn how to use charts in react
+a. Create the button linking to another component page with params Done.
+b. Learn how to use charts in react Done.
+
+I want to integrate buying and selling of crypto via the integration of MongoDB
+
+I want to package this as a quick cryptocurrency viewer. It has login and signup, routing, and the like. I want to style this, and then release it on github. Post-project we do a little reflection on what we learned
