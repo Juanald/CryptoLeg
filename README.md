@@ -1,6 +1,6 @@
 # CryptoLeg - Cryptocurrency Ledger
 
-![CryptoLeg Logo](./logo.png)
+![CryptoLeg Logo](./static/logo.png)
 
 CryptoLeg is a minimalist cryptocurrency ledger that allows users to view cryptocurrency data at a moment's notice, with real-time graphs, information, and resources for the top 50 cryptocurrencies. It is powered by the CoinRanking API and makes use of React, Tailwind CSS, and the CoinRanking API to deliver dynamic data to users.
 
