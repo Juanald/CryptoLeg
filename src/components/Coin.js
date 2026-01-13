@@ -63,6 +63,7 @@ const CoinComponent = (props) => {
           Get a Real Time Graph
         </button>
       </div>
+      <div></div>
     </div>
   );
 };
